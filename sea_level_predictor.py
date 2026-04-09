@@ -24,10 +24,12 @@ def draw_plot():
     xrange2 = np.arange(df2[xcol].min(), 2051)
     ax.plot(xrange2, reg2.intercept + reg2.slope * xrange2)
 
-
     # Add labels and title
+    ax.set_title('Rise in Sea Level')
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Sea Level (inches)')
 
     
     # Save plot and return data for testing (DO NOT MODIFY)
-    plt.savefig('sea_level_plot.png')
+    fig.savefig('sea_level_plot.png')
     return plt.gca()
